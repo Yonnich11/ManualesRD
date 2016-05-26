@@ -1,0 +1,33 @@
+body{
+	margin: 0 auto;
+}
+ #logo{
+	background-image:url("../img/logo.jpg") ; 
+	background-repeat: no-repeat;
+	width: 550 %;
+	height: 170px;
+	margin: 100px 0 0 450px;
+	
+}
+.search{
+	margin: -150px 0 0 450px;
+	width: 450px;
+	border: 1px solid;
+ border-radius: 2px 2px 3px 3px;
+padding:6px; 
+}
+.btnSearch{
+	border: 1px solid;
+ border-radius: 5px 5px 5px 5px;
+ background-color: #345632;
+ color: #fff;
+ padding:6px; 
+ width: 70px;
+}
+
+
+
+
+
+
+
