@@ -1,3 +1,11 @@
+<?php 3
+require_once("Class/procesar.php");
+require_once("Class/Manuales.php");
+$Crud = new Procesar();
+$libro = new Manuales();
+$listaManual = $Crud->BuscarManual('');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,24 +19,40 @@
 </head>
 <body>
 <div id="logo">
-	
+
 </div>
 <form action="" method="get">
 
 <div class="input-group input-group-lg col-md-6 mx-auto">
   <input type="search" class="form-control" name="datos" placeholder="Ejemplo: Java, PHP" >
   <div class="input-group-append">
-    <button class="btn btn-success" type="button" id="button-addon2">Buscar</button>
+    <button class="btn btn-success" onclick="" type="button" id="button-addon2">Buscar</button>
   </div>
 </div>
 </form>
 
-
+<br>
+<br>
+<br>
+<br>
 <div id="resultado">
-	
+
+    <?php foreach($listaManual as $libro) {?>
+  
+  <div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title"><?php echo $libro->getNombre ?></h5>
+      <h6 class="card-subtitle mb-2 text-muted"></h6>
+      <p class="card-text"><?php echo $libro->getDescripcion() ?></p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+<?php } ?>
+
+
 </div>
 
 
 </body>
 </html>
-
